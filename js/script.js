@@ -20,6 +20,7 @@ var showValid = document.getElementById("showValid");
 var showResult = document.getElementById("showResult");
 var showInvalid = document.getElementById("showInvalid");
 var showRequired = document.getElementById("showRequired");
+var showExist = document.getElementById("showExist");
 
 //check if user enter a valid name
 
@@ -43,6 +44,7 @@ function validateSignup() {
 
     showValid.classList.add("isValid");
     showError.classList.remove("isError");
+    showExist.classList.remove("isExist");
 
     inputsObj.nameUser = userName.value;
     inputsObj.emailUser = userEmailSignup.value;
@@ -50,7 +52,8 @@ function validateSignup() {
 
     var couvertedObject = JSON.stringify(inputsObj);
     localStorage.setItem("inputsUsers", couvertedObject);
-  } else if (
+  }
+  if (
     regexName.test(userName.value) === false ||
     regexEmail.test(userEmailSignup.value) === false ||
     regexPassword.test(userPasswordSignup.value) === false
@@ -59,6 +62,13 @@ function validateSignup() {
 
     showError.classList.add("isError");
     showValid.classList.remove("isValid");
+    showExist.classList.remove("isExist");
+  }
+  if (userEmailSignup.value === getInputs.emailUser) {
+    showValid.classList.remove("isValid");
+    showError.classList.remove("isError");
+
+    showExist.classList.add("isExist");
   }
 }
 
@@ -70,26 +80,26 @@ function validateSignin() {
   showResult.style.display = "block";
 
   if (
-    userEmailSignin.value != getInputs.emailUser ||
-    userPasswordSignin.value != getInputs.passwordUser ||
-    (userEmailSignin.value != getInputs.emailUser &&
-      userPasswordSignin.value != getInputs.passwordUser)
+    userEmailSignin.value !== getInputs.emailUser ||
+    userPasswordSignin.value !== getInputs.passwordUser ||
+    (userEmailSignin.value !== getInputs.emailUser &&
+      userPasswordSignin.value !== getInputs.passwordUser)
   ) {
     showRequired.classList.remove("isRequired");
 
     showInvalid.classList.add("isInvalid");
   }
   if (
-    userEmailSignin.value == "" ||
-    userPasswordSignin.value == "" ||
-    (userEmailSignin.value == "" && userPasswordSignin.value == "")
+    userEmailSignin.value === "" ||
+    userPasswordSignin.value === "" ||
+    (userEmailSignin.value === "" && userPasswordSignin.value == "")
   ) {
     showRequired.classList.add("isRequired");
     showInvalid.classList.remove("isInvalid");
   }
   if (
-    userEmailSignin.value == getInputs.emailUser &&
-    userPasswordSignin.value == getInputs.passwordUser
+    userEmailSignin.value === getInputs.emailUser &&
+    userPasswordSignin.value === getInputs.passwordUser
   ) {
     location.href = "home.html";
   }
