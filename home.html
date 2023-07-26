@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="navbar shadow-lg py-3 navbar-expand-lg">
+      <div class="container">
+        <a href="#" class="home-logo text-decoration-none text-white fs-5"
+          >SMART LOGIN</a
+        >
+        <button
+          class="btn btn-outline-warning btnLogout"
+          onclick="logoutUser()"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+
+    <div class="container d-flex align-items-center h-100">
+      <div class="content-home w-75 m-auto text-center p-5">
+        <h1 class="welcome-user" id="welcomeUser"></h1>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

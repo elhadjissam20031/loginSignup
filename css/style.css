@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #24353f;
+  width: 100%;
+  height: 100vh;
+}
+.title-login {
+  font-family: "Titillium Web", sans-serif;
+  color: #17a2b8;
+}
+.login-form {
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+input {
+  border: 1px solid white;
+  outline: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+}
+
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 1px solid #17a2b8;
+  color: #17a2b8;
+}
+
+button:hover {
+  background-color: #17a2b8;
+  color: white;
+}
+a:hover {
+  text-decoration: underline !important;
+}
+.content-home {
+  background-color: inherit;
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+.content-home h1 {
+  color: #17a2b8;
+}
+
+.showError,
+.showRequired,
+.showInvalid {
+  color: red;
+  display: none;
+}
+
+.showValid {
+  color: green;
+  display: none;
+}
+.isValid {
+  display: block;
+}
+.isError,
+.isInvalid,
+.isRequired {
+  display: block;
+}
+.showResult {
+  display: none;
+}

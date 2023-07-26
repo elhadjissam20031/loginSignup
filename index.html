@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div class="container forms d-flex">
+      <div class="login-form w-100 m-auto mt-5 py-5">
+        <div class="form-content text-center w-75 m-auto">
+          <h1 class="mb-5 title-login">Smart Login System</h1>
+
+          <div class="form-inputs d-flex flex-column">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="p-2"
+              id="userEmailSignin"
+            />
+
+            <input
+              type="password"
+              placeholder="Enter your password"
+              class="my-2 p-2"
+              id="userPasswordSignin"
+            />
+            <div class="showResult my-4" id="showResult">
+              <span class="showInvalid" id="showInvalid"
+                >incorrect email or password</span
+              ><br />
+              <span class="showRequired" id="showRequired"
+                >All inputs is required</span
+              >
+            </div>
+          </div>
+          <button
+            onclick="validateSignin()"
+            type="submit"
+            class="my-3 p-2 d-block w-100 m-auto"
+            id="btnLogin"
+          >
+            Login
+          </button>
+          <p class="text-center text-white linkd">
+            Don't have an account?
+            <a href="signup.html" class="text-decoration-none text-white"
+              >Sign Up</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
