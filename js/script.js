@@ -78,6 +78,7 @@ var getInputs = JSON.parse(retrievedObject);
 
 function validateSignin() {
   showResult.style.display = "block";
+  showRequired.classList.remove("isRequired");
 
   if (
     userEmailSignin.value !== getInputs.emailUser ||
@@ -113,4 +114,5 @@ function logoutUser() {
   location.href = "index.html";
 }
 var btnLogout = document.getElementsByClassName("btnLogout")[0];
-//show error result
+
+
